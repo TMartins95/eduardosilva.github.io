@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesIndex.css">
+
+</head>
+<body>
+    <script type="text/javascript" src="Menu.js"></script>
+    <header id="menu">
+        
+    </header>
+    <main>
+        <div>
+            <form>
+                <div id="fields">
+                    
+                </div>
+            </form>
+        </div>
+        <button id="loadProducts">Carregar Produtos</button>
+    </main>
+    <script type="text/javascript" src="products.js"></script>
+    
+
+    <script>
+        menu();
+        const fields = ["Nome", "Idade", "Morada"];
+
+        function form() {
+            const divFields = document.getElementById("fields");
+            
+            fields.forEach(item => {
+                    
+                    const divField = document.createElement("div");
+
+                    divField.innerHTML = `<div class="divCell"><label class="required"><h3>${item}</h3> </label><input type="text" name="text" ></div>`;
+
+                    divFields.appendChild(divField);
+
+            });
+        }
+        form();
+    </script>
+</body>
+</html>
